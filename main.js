@@ -1,3 +1,5 @@
+//es5
+
 let statistics = {
   coins: 0,
   pizzas: 0,
@@ -5,8 +7,7 @@ let statistics = {
   toppings: 0,
   sauce: 0,
   pizzaValue: 2,
-  authenticPizza: 0,
-};
+  authenticPizza: 0};
 const statisticsDisplay = {
   coins: document.querySelector('.coins'),
   pizzas: document.querySelector('.pizzas'),
@@ -174,6 +175,8 @@ let prices = {
   toppingPrice: 50,
   saucePrice: 50,
 };
+
+//TODO: Make prices scale with updatePrices()
 function updatePrices() {
   priceLocations.valuePrice.textContent = prices.valuePrice;
   priceLocations.makerPrice.textContent = prices.makerPrice;
@@ -187,6 +190,7 @@ function updatePrices() {
   document.querySelector('.toppingLevel').textContent = autoMaker.toppingMaker;
   document.querySelector('.sauceLevel').textContent = autoMaker.sauceMaker;
 }
+
 function buyUpgrades(thing) {
   switch (thing) {
     case 'value':
@@ -230,6 +234,7 @@ function buyUpgrades(thing) {
   updatePrices();
   updateValues();
 }
+
 let autoMaker = {
   pizzaMaker: 0,
   doughMaker: 0,
